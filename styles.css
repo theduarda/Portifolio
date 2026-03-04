@@ -1,0 +1,182 @@
+:root {
+    --bg-main: #1e1e1e;
+    --bg-sidebar: #252526;
+    --bg-activity: #333333;
+    --bg-tabs: #2d2d2d;
+    --bg-title: #3c3c3c;
+    --bg-status: #007acc;
+
+    --text: #d4d4d4;
+    --text-muted: #858585;
+
+    --keyword: #569CD6;
+    --string: #CE9178;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Janela */
+.window {
+    width: 95%;
+    height: 95vh;
+    background-color: var(--bg-main);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 40px rgba(0,0,0,0.6);
+}
+
+/* Title Bar */
+.title-bar {
+    background-color: var(--bg-title);
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+}
+
+.window-buttons {
+    display: flex;
+    gap: 8px;
+    margin-right: 15px;
+}
+
+.btn {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.red { background-color: #ff5f56; }
+.yellow { background-color: #ffbd2e; }
+.green { background-color: #27c93f; }
+
+.title {
+    font-size: 13px;
+    color: var(--text);
+}
+
+/* VSCode Layout */
+.vscode {
+    flex: 1;
+    display: flex;
+}
+
+/* Activity Bar */
+.activity-bar {
+    width: 50px;
+    background-color: var(--bg-activity);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15px;
+}
+
+.icon {
+    margin: 20px 0;
+    opacity: 0.6;
+}
+
+.icon.active,
+.icon:hover {
+    opacity: 1;
+}
+
+/* Explorer */
+.explorer {
+    width: 220px;
+    background-color: var(--bg-sidebar);
+    padding: 15px;
+}
+
+.explorer h3 {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+}
+
+.file {
+    list-style: none;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.file.active,
+.file:hover {
+    color: #ffffff;
+}
+
+/* Editor Area */
+.editor-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    background-color: var(--bg-tabs);
+}
+
+.tab {
+    padding: 10px 20px;
+    font-size: 13px;
+}
+
+.tab.active {
+    background-color: var(--bg-main);
+}
+
+/* Editor */
+.editor {
+    flex: 1;
+    padding: 20px;
+    font-family: 'Fira Code', monospace;
+    font-size: 14px;
+    line-height: 1.6;
+    overflow-x: auto;
+}
+
+/* Linha */
+.linha {
+    display: flex;
+}
+
+.numero {
+    width: 40px;
+    text-align: right;
+    padding-right: 15px;
+    color: var(--text-muted);
+    user-select: none;
+}
+
+/* Syntax Highlight */
+.keyword {
+    color: var(--keyword);
+}
+
+.string {
+    color: var(--string);
+}
+
+/* Status Bar */
+.status-bar {
+    background-color: var(--bg-status);
+    padding: 5px 15px;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
